@@ -1,2 +1,4 @@
-# legonet-asci
-Reproducing LegoNet paper 
+# LegoNet: Memory Footprint Reduction Through Block Weight Clustering ([Paper](https://ieeexplore.ieee.org/abstract/document/9927846))
+
+## Overview
+As the need for neural network-based applications to become more accurate and powerful grows, so too does their size and memory footprint. With embedded devices, whose cache and RAM are limited, this growth hinders their ability to leverage state-of-the-art neural network architectures. In this work, we propose LegoNet, a compression technique that constructs blocks of weights of the entire model regardless of layer type and clusters these induced blocks. Using blocks instead of individual values to cluster the weights, we were able to compress ResNet-50 trained for Cifar-10 and ImageNet with only 32 4x4 blocks, compressing the memory footprint by over a factor of 64x without having to remove any weights or changing the architecture and no loss to accuracy, nor retraining or any data, and show how to find an arrangement of 16 4x4 blocks that gives a compression ratio of 128x with less than 3% accuracy loss. This was all achieved with no need for (re)training or fine-tuning.
